@@ -21,12 +21,6 @@ struct GEdge {
         b = top.x - m * top.y;
     }
 
-    std::string toString() {
-        return "edge: (" + std::to_string(top.x) + ", " + std::to_string(top.y) + ") -> (" +
-               std::to_string(bottom.x) + ", " + std::to_string(bottom.y) + ")" +
-               (!horizontal() ? " valid" : " invalid");
-    }
-
     float getX(float y) { return m * y + b; }
     float getY(float x) { return (x - b) / m; }
 };
